@@ -1,0 +1,28 @@
+tem que saber fazer as types(entidades = user, coments, posts), queries e mutation ... tds se escrevem da msm forma
+
+-por padrão todos podem ser nulos mas se vc quer que seja obrigatorio, poe ! no fim
+
+porque usar graphql? 
+    ter apenas o que vc quer como resultado
+    isso pq empresas de nuvem cobram por trafego, se vc trafega dados que nã seram exibidos vc esta pagando por nada ... isso se chama overfeching = trafegar mais dados do que o cliente precisa 
+
+dependences
+    apollo-server
+    graphql
+
+obs: 
+    o graphql é todo tipado por isso preciso dizer os schemas, quais ações o user pode executar (crud)
+    aqui no graphql toda request é post 
+    toda request bate no msm endpoint, por isso se usa a query e mutation
+    query = pegar informações de um determinaddo user (GET)
+    mutation = manipular dados (put/patch/post/delete)
+        -ambas são strngs que mandamos via post pelo body
+    Scalar types = são os tios primitivos (String, Int, Boolean, Float, ID = indentificador)
+
+obs2:
+    quando vc da um node no arquivo js ele roda o servidor apollo na porta 4000 e abri o playground, onde ele ofere um intelissense 
+    tem tambem as documentações que o playground fornece
+
+vc tbm tipa determinado valor de um tipo que vc msm criou
+
+-no resolve tem o getUserById que recebe _, args, esses args são os parametros passados acima nos types
